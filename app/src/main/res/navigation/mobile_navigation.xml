@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="io.expressive.kudilonga.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_addPalavra"
+            app:destination="@id/addPalavra" />
+        <action
+            android:id="@+id/action_nav_home_to_palavraDetails"
+            app:destination="@id/palavraDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPalavra"
+        android:name="io.expressive.kudilonga.ui.addPalavra.AddPalavra"
+        android:label="Adicionar palavra"
+        tools:layout="@layout/fragment_add_palavra" >
+        <action
+            android:id="@+id/action_addPalavra_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/palavraDetails"
+        android:name="io.expressive.kudilonga.ui.details.PalavraDetails"
+        android:label="Significado"
+        tools:layout="@layout/fragment_palavra_details" >
+        <argument
+            android:name="id_palavra"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

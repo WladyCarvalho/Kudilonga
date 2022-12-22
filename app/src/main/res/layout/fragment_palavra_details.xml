@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.PalavraDetails">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+     <androidx.appcompat.widget.LinearLayoutCompat
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+         <TextView
+             android:id="@+id/txt_palavra"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Palavra"
+             android:textSize="22sp"
+             android:textStyle="bold"
+             android:layout_marginTop="16dp"
+             android:layout_marginLeft="16dp"/>
+
+         <TextView
+             android:id="@+id/txt_significado_2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Palavra"
+             android:textSize="12sp"
+             android:layout_marginTop="16dp"
+             android:layout_marginLeft="16dp"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Exemplos"
+             android:textSize="22sp"
+             android:textStyle="bold"
+             android:layout_marginTop="16dp"
+             android:layout_marginLeft="16dp"/>
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recyclerDt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:layout_marginHorizontal="16dp"/>
+     </androidx.appcompat.widget.LinearLayoutCompat>
+  </ScrollView>
+
+</RelativeLayout>
